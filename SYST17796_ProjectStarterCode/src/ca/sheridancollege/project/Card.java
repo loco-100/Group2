@@ -5,21 +5,35 @@
  */
 package ca.sheridancollege.project;
 
+
+import java.util.*;
+
 /**
- * A class to be used as the base Card class for the project. Must be general enough to be instantiated for any Card
- * game. Students wishing to add to the code should remember to add themselves as a modifier.
- *
- * @author dancye
+ * SYST 17796 Project - War Card Game
+ * Authors: Rajanpreet Kaur, Abhishek Kumar, Gazalpreet, Ayush Shailesbhai Patel
+ * Date: 09-02-2025
  */
-public abstract class Card {
-    //default modifier for child classes
 
-    /**
-     * Students should implement this method for their specific children classes
-     *
-     * @return a String representation of a card. Could be an UNO card, a regular playing card etc.
-     */
+// Card class representing a playing card
+class Card {
+    private final String suit;
+    private final int rank;
+
+    public Card(String suit, int rank) {
+        this.suit = suit;
+        this.rank = rank;
+    }
+
+    public int getRank() {
+        return rank;
+    }
+
     @Override
-    public abstract String toString();
-
+    public String toString() {
+        return rank + " of " + suit;
+    }
 }
+
+
+
+
